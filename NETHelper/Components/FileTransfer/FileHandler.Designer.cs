@@ -1,4 +1,4 @@
-﻿namespace ApplicationCore.Components.FileTransfer
+﻿namespace GenjiCore.Components.FileTransfer
 {
     partial class FileHandler
     {

@@ -6,7 +6,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ApplicationCore.Helper.WebApi
+namespace GenjiCore.Helper.WebApi
 {
     public static class WebApiExtensions
     {

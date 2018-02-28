@@ -1,5 +1,5 @@
-﻿using ApplicationCore.Components.FileTransfer;
-using ApplicationCore.Components.Notifier;
+﻿using GenjiCore.Components.FileTransfer;
+using GenjiCore.Components.Notifier;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,7 +10,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ApplicationCore
+namespace GenjiCore
 {
     public static class CoreControllerCenter
     {

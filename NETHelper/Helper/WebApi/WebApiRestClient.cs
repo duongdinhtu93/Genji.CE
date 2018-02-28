@@ -5,7 +5,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ApplicationCore.Helper.WebApi
+namespace GenjiCore.Helper.WebApi
 {
     public class WebApiRestClient
     {

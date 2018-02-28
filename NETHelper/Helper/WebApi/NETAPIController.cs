@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
 
-namespace ApplicationCore.Helper.WebApi
+namespace GenjiCore.Helper.WebApi
 {
     public class NETAPIController: ApiController
     {

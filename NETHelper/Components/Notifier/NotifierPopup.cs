@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ApplicationCore.Components.Notifier
+namespace GenjiCore.Components.Notifier
 {
     internal partial class NotifierPopup : Form
     {

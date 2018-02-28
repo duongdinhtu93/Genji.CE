@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ApplicationCore.Helper.WebApi
+namespace GenjiCore.Helper.WebApi
 {
     public class WebApiHeadersBase
     {

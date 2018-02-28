@@ -1,4 +1,4 @@
-﻿using ApplicationCore;
+﻿using GenjiCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;

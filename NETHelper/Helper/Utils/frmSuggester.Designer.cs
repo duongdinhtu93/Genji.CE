@@ -1,4 +1,4 @@
-﻿namespace ApplicationCore.Helper.Utils
+﻿namespace GenjiCore.Helper.Utils
 {
     partial class frmSuggester
     {
@@ -58,6 +58,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmSuggester";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "frmSuggester";
             this.TopMost = true;
             this.ResumeLayout(false);

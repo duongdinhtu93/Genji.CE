@@ -5,7 +5,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ApplicationCore.Helper.Security
+namespace GenjiCore.Helper.Security
 {
     static class SecurityExtensions
     {

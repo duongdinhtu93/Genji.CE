@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ApplicationCore")]
+[assembly: AssemblyTitle("GenjiCore")]
 [assembly: AssemblyDescription("Libraries support developer to easy build any application on .NET Framework")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ApplicationCore")]
+[assembly: AssemblyProduct("GenjiCore")]
 [assembly: AssemblyCopyright("Copyright ©  2017 by Dương Đình Tú")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

@@ -9,7 +9,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ApplicationCore.Components.FileTransfer
+namespace GenjiCore.Components.FileTransfer
 {
     internal class FileTransferController : IFileTransferController, IController
     {

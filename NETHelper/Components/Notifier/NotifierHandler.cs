@@ -1,4 +1,4 @@
-﻿using ApplicationCore.Properties;
+﻿using GenjiCore.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,7 +10,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ApplicationCore.Components.Notifier
+namespace GenjiCore.Components.Notifier
 {
     internal partial class NotifierHandler : Form
     {

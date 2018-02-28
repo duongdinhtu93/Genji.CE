@@ -1,4 +1,4 @@
-﻿namespace ApplicationCore.Components.Notifier
+﻿namespace GenjiCore.Components.Notifier
 {
     partial class NotifierPopup
     {
@@ -91,7 +91,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = global::ApplicationCore.Properties.Resources.msg;
+            this.pictureBox1.Image = global::GenjiCore.Properties.Resources.msg;
             this.pictureBox1.Location = new System.Drawing.Point(0, 19);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(68, 61);

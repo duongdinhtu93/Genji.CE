@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ApplicationCore.Components.GPS
+namespace GenjiCore.Components.GPS
 {
     public class Coordinates
     {

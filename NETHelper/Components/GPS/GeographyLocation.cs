@@ -1,4 +1,4 @@
-﻿using ApplicationCore.Helper;
+﻿using GenjiCore.Helper;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -8,7 +8,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ApplicationCore.Components.GPS
+namespace GenjiCore.Components.GPS
 {
     public static class GeographyLocation
     {

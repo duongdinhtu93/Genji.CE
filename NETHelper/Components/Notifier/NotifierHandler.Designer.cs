@@ -1,4 +1,4 @@
-﻿namespace ApplicationCore.Components.Notifier
+﻿namespace GenjiCore.Components.Notifier
 {
     partial class NotifierHandler
     {

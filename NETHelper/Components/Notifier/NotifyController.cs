@@ -1,4 +1,4 @@
-﻿using ApplicationCore.Components.Notifier;
+﻿using GenjiCore.Components.Notifier;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ApplicationCore.Components.Notifier
+namespace GenjiCore.Components.Notifier
 {
     internal class NotifyController : INotifierController, IController
     {

@@ -1,7 +1,7 @@
-﻿using ApplicationCore;
-using ApplicationCore.Components;
-using ApplicationCore.Helper;
-using ApplicationCore.Helper.Utils;
+﻿using GenjiCore;
+using GenjiCore.Components;
+using GenjiCore.Helper;
+using GenjiCore.Helper.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +14,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Test.Properties;
+using Test.Shutter;
 
 namespace Test
 {
@@ -28,7 +29,7 @@ namespace Test
         private void Test_Load(object sender, EventArgs e)
         {
             Control.CheckForIllegalCrossThreadCalls = false;
-            textBox2.RegisterSuggester();
+            textBox2.RegisterSuggester(SuggestType.NaturalLanguage);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -43,7 +44,7 @@ namespace Test
 
         private void button2_Click(object sender, EventArgs e)
         {
-            CoreControllerCenter.FileController.Upload(new ApplicationCore.Components.FileTransfer.FTPAuthentication() { Url = "ftp://speedtest.tele2.net/upload/" }, null);
+            CoreControllerCenter.FileController.Upload(new GenjiCore.Components.FileTransfer.FTPAuthentication() { Url = "ftp://speedtest.tele2.net/upload/" }, null);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -53,7 +54,7 @@ namespace Test
 
         private void button4_Click(object sender, EventArgs e)
         {
-            var condinate = ApplicationCore.Components.GPS.GeographyLocation.GetCoordinates(txtAddress.Text);
+            var condinate = GenjiCore.Components.GPS.GeographyLocation.GetCoordinates(txtAddress.Text);
             if (string.IsNullOrEmpty(condinate.Address))
             {
                 MessageBox.Show("Không tìm thấy địa vị trí này");
@@ -66,26 +67,7 @@ namespace Test
 
         private void txtAddress_TextChanged(object sender, EventArgs e)
         {
-            var suggestwords = ApplicationCore.Helper.Utils.Suggester.GetSuggestion(txtAddress.Text);
-            textBox1.Text = string.Empty;
-            suggestwords.ToList().ForEach(d =>
-            {
-                textBox1.Text += d + "\n";
-            });
-            return;
-
-
-            if (_tmrDelaySearch != null)
-                _tmrDelaySearch.Stop();
-
-            if (_tmrDelaySearch == null)
-            {
-                _tmrDelaySearch = new System.Windows.Forms.Timer();
-                _tmrDelaySearch.Tick += _tmrDelaySearch_Tick;
-                _tmrDelaySearch.Interval = DelayedTextChangedTimeout;
-            }
-
-            _tmrDelaySearch.Start();
+          
 
         }
 
@@ -97,7 +79,7 @@ namespace Test
             string word = string.IsNullOrEmpty(txtAddress.Text.Trim()) ? null : txtAddress.Text.Trim();
             if (word != string.Empty)
             {
-                var condinate = ApplicationCore.Components.GPS.GeographyLocation.GetCoordinates(word);
+                var condinate = GenjiCore.Components.GPS.GeographyLocation.GetCoordinates(word);
                 if (!string.IsNullOrEmpty(condinate.Address))
                     textBox1.Text = condinate.Address;
             }
@@ -115,7 +97,12 @@ namespace Test
         private void button6_Click(object sender, EventArgs e)
         {
             string keyword = txtAddress.Text;
-            ApplicationCore.Helper.Utils.Suggester.GetSuggestion(keyword);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            frmSimple frm = new frmSimple();
+            frm.ShowDialog();
         }
     }
 }

@@ -8,13 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ApplicationCore.Helper.Utils
+namespace GenjiCore.Helper.Utils
 {
     public partial class frmSuggester : Form
     {
         public void AppendData(string[] data)
         {
-
+            listBoxRecommendation.DataSource = data;
         }
         public frmSuggester()
         {

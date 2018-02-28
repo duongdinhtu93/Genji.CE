@@ -12,9 +12,11 @@ using System.Reflection;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 using System.Xml.Linq;
+using System.Xml.Serialization;
 
-namespace ApplicationCore.Helper
+namespace GenjiCore.Helper
 {
     public static class DataHelper
     {
@@ -1348,6 +1350,33 @@ namespace ApplicationCore.Helper
                 }
             }
             return dataTable1;
+        }
+        public static string ToXmlString<T>(this object obj)
+        {
+            XmlSerializer xs = new XmlSerializer(typeof(T));
+            string xml = string.Empty;
+            using (var sww = new StringWriter())
+            {
+                using (XmlWriter writer = XmlWriter.Create(sww))
+                {
+                    xs.Serialize(writer, obj);
+                    xml = sww.ToString(); 
+                }
+            }
+            return xml;
+        }
+        public static T ToObjectOf<T>(this string xml)
+        {
+            object obj = null;
+            XmlSerializer xs = new XmlSerializer(typeof(T));
+            using (var sww = new StringWriter())
+            {
+                using (XmlReader reader = XmlReader.Create(new StringReader(xml)))
+                {
+                    obj = xs.Deserialize(reader);
+                }
+            }
+            return (T)obj;
         }
     }
 }
