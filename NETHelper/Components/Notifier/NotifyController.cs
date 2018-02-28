@@ -11,6 +11,10 @@ namespace GenjiCore.Components.Notifier
 {
     internal class NotifyController : INotifierController, IController
     {
+        internal NotifyController(ControllerStartSettings setting)
+        {
+
+        }
         private bool IsRuned = false;
         private static Action<string, string, Action> PopupMessageChanged = (caption, message, function) => { };
 

@@ -14,7 +14,7 @@ namespace GenjiCore.Components.FileTransfer
     internal class FileTransferController : IFileTransferController, IController
     {
         private static Action<FTPAuthentication, Action<bool>> OnUploadRequested = (url, callbackCompleted) =>{};
-        public FileTransferController()
+        internal FileTransferController(ControllerStartSettings settings)
         {
         }
         private Action onComponentKilled = () => { };

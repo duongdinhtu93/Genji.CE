@@ -25,14 +25,19 @@ namespace GenjiCore
             if (IsStarted)
                 return;
 
-            NotifyController = new NotifyController();
-            FileController = new FileTransferController();
+            ControllerStartSettings controllerStartSettings = GetDefaultControllerSetting();
+            NotifyController = new NotifyController(controllerStartSettings);
+            FileController = new FileTransferController(controllerStartSettings);
 
             ((IController)NotifyController)?.Run();
             ((IController)FileController)?.Run();
 
             Application.ThreadExit += (s, e) => { KillComponents(); };
             IsStarted = true;
+        }
+        private static ControllerStartSettings GetDefaultControllerSetting()
+        {
+            throw new NotImplementedException();
         }
 
 
