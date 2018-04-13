@@ -18,12 +18,12 @@ catch
 return result;
 "));
 
-//Crée la classe
+//CrÃ©e la classe
 CodeTypeDeclaration pClass = 
   new System.CodeDom.CodeTypeDeclaration(classname);
 pClass.Attributes = MemberAttributes.Public;
 pClass.Members.Add(pMethod);
-//Crée le namespace
+//CrÃ©e le namespace
 CodeNamespace pNamespace = new CodeNamespace("myNameSpace");
 pNamespace.Types.Add(pClass);
 foreach(string sUsing in usingList)
@@ -48,4 +48,53 @@ if (pResults.Errors != null && pResults.Errors.Count&gt;0)
       MessageBox.Show(pError.ToString());
     result =
     pResults.CompiledAssembly.CreateInstance("myNameSp ace."+classname);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------- The result will be below
+using System.Text.RegularExpressions;
+namespace myNameSpace
+{
+    public class myClass
+    {
+        public bool myMethod(string[] boxes)
+        {
+            bool result=true;
+            try
+            {
+                string pays=@"ES
+                FR
+                EN
+                "
+                Regex regex=new Regex(@"^[A-Za-z]
+                {
+                    2
+                }
+                $");
+                result=regex.IsMatch(boxes[0]);
+                if (result)
+                {
+                    regex=new Regex(@"^"+boxes[0]+@".$",RegexOptions.Multiline);
+                    result=regex.Matches(pays).Count!=0;
+                }
+            }
+            catch
+            {
+                result=false;
+            }
+            return result;
+        }
+    }
 }
